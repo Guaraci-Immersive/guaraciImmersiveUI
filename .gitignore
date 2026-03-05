@@ -49,3 +49,20 @@ buildNumber.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Visual Studio / .NET
+[Bb]in/
+[Oo]bj/
+.vs/
+.idea/
+*.user
+*.suo
+
+# MAUI / Mobile
+Generated\ Files/
+AppPackages/
+BundleArtifacts/
+
+# OS
+Thumbs.db
+.DS_Store
