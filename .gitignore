@@ -1,68 +1,41 @@
-# .NET / Visual Studio
-bin/
-obj/
-*.user
-*.userosscache
-*.sln.docstates
-
-# Roslyn cache directories
-.vs/
-.vs-code/
-.idea/
-
-# Mac / iOS (Caso compile para essas plataformas no futuro)
-.DS_Store
-[Tt]humbs.db
-
-# MAUI Specific
-*.db-shm
-*.db-wal
-
-# Build Results
+# ==================================
+# Pastas de Compilação do .NET
+# ==================================
 [Bb]in/
 [Oo]bj/
-[Ll]og/
+[Oo]ut/
 
-# Java/Maven (Caso queira limpar os restos do projeto anterior que vi na sua print)
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/
-
-# User-specific files
-*.rsuser
-*.suo
+# ==================================
+# Configurações Locais de IDEs
+# ==================================
+# Visual Studio
+.vs/
 *.user
 *.userosscache
 *.sln.docstates
+*.suo
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
+# VS Code / JetBrains Rider
+.vscode/
+.idea/
+
+# ==================================
+# Arquivos de Sistema Operacional
+# ==================================
+# Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Visual Studio / .NET
-[Bb]in/
-[Oo]bj/
-.vs/
-.idea/
-*.user
-*.suo
+# Mac / Linux
+.DS_Store
+.Trashes
+~*
 
-# MAUI / Mobile
+# ==================================
+# Específicos do MAUI / Mobile
+# ==================================
 Generated\ Files/
 AppPackages/
 BundleArtifacts/
-
-# OS
-Thumbs.db
-.DS_Store
+*_ResXFiles/
