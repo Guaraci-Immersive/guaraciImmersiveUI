@@ -1,5 +1,6 @@
 using CommunityToolkit.Maui.Markup;
 using Microsoft.Maui.Controls.Shapes;
+using GuaraciImmersive.ViewModels;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
 namespace GuaraciImmersive.Views;
@@ -9,6 +10,7 @@ public class LoginPage : ContentPage
     public LoginPage()
     {
         BackgroundColor = Color.FromArgb("#F0F2F5");
+        BindingContext = new LoginViewModel();
 
         Content = new Grid
         {
@@ -34,10 +36,12 @@ public class LoginPage : ContentPage
                             new Label { Text = "Acesso seguro", TextColor = Colors.Gray }.CenterHorizontal().Margin(new Microsoft.Maui.Thickness(0, 0, 0, 20)),
 
                             new Label { Text = "Email", FontAttributes = FontAttributes.Bold },
-                            new Entry { Placeholder = "Digite seu email" },
+                            new Entry { Placeholder = "Digite seu email" }
+                                .Bind(Entry.TextProperty, nameof(LoginViewModel.Email)),
 
                             new Label { Text = "Senha", FontAttributes = FontAttributes.Bold },
-                            new Entry { IsPassword = true, Placeholder = "Digite sua senha" },
+                            new Entry { IsPassword = true, Placeholder = "Digite sua senha" }
+                                .Bind(Entry.TextProperty, nameof(LoginViewModel.Password)),
 
                             new Button
                             {
@@ -47,6 +51,7 @@ public class LoginPage : ContentPage
                                 CornerRadius = 8,
                                 HeightRequest = 45
                             }.Margin(new Microsoft.Maui.Thickness(0, 30, 0, 0))
+                             .Bind(Button.CommandProperty, nameof(LoginViewModel.LoginCommand))
                         }
                     }
                 }.CenterHorizontal().CenterVertical()
